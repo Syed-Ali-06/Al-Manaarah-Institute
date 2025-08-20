@@ -2,159 +2,205 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Manaarah Institute | Home</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: "Inter", Arial, sans-serif;
-            background: #fdfdfd;
-            color: #222;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Manaarah Institute | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
 
-        /* Navbar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(90deg, #0f4c75, #3282b8);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #0f4c75, #3282b8);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        nav h1 {
-            font-size: 1.4rem;
-            color: #fff;
-        }
+    nav h1 {
+      font-size: 1.4rem;
+      color: #fff;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            margin: 0;
-            padding: 0;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            /* removes default underline */
-            color: #fff;
-            font-weight: 500;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
 
-        nav ul li a.active {
-            border: none;
-            /* removes the active link underline/border */
-            color: #fff;
-            /* keep active link colour if needed */
-        }
+    nav ul li a.active {
+      border: none;
+      color: #fff;
+    }
 
-        /* Hero */
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #3282b8, #0f4c75);
-            color: #fff;
-        }
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #3282b8, #0f4c75);
+      color: #fff;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #f1f1f1;
-            /* brighter text */
-        }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
-        .hero .btn {
-            background: #fff;
-            color: #0f4c75;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #f1f1f1;
+    }
 
-        .hero .btn:hover {
-            background: #f1f1f1;
-        }
+    .hero .btn {
+      background: #fff;
+      color: #0f4c75;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-        /* Welcome Section */
-        .welcome {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 2rem;
-            background: #f7f9fc;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    .hero .btn:hover {
+      background: #f1f1f1;
+    }
 
-        .welcome h2 {
-            color: #0f4c75;
-            margin-bottom: 1rem;
-        }
+    /* Welcome Section */
+    .welcome {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #f7f9fc;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-        .welcome p {
-            font-size: 1.1rem;
-            color: #333;
-        }
+    .welcome h2 {
+      color: #0f4c75;
+      margin-bottom: 1rem;
+    }
 
-        /* Footer */
-        footer {
-            background: linear-gradient(90deg, #0f4c75, #3282b8);
-            text-align: center;
-            padding: 1rem;
-            color: #fff;
-            margin-top: 3rem;
-        }
-    </style>
+    .welcome p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #0f4c75, #3282b8);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(180deg, #0f4c75, #3282b8);
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        width: 180px;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 1000;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Al Manaarah Institute</h1>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="testimonials.html" class="active">Testimonials</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1>Al Manaarah Institute</h1>
+      <!-- Hamburger button -->
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Hero -->
-    <div class="hero">
-        <h2>Guiding Students Towards Knowledge and Excellence</h2>
-        <p>Structured learning, qualified teachers, and flexible hours.</p>
-        <a href="contact.html" class="btn">Get in Touch</a>
-    </div>
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Guiding Students Towards Knowledge and Excellence</h2>
+    <p>Structured learning, qualified teachers, and flexible hours.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </div>
 
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <h2>Welcome</h2>
-        <p>
-            Al Manaarah Institute provides high-quality Islamic and academic education
-            through structured programmes, expert teachers, and flexible scheduling.
-            Trusted by families and experienced in guiding hundreds of students,
-            we are dedicated to nurturing the next generation with knowledge and values.
-        </p>
-    </section>
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h2>Welcome</h2>
+    <p>
+      Al Manaarah Institute provides high-quality Islamic and academic education
+      through structured programmes, expert teachers, and flexible scheduling.
+      Trusted by families and experienced in guiding hundreds of students,
+      we are dedicated to nurturing the next generation with knowledge and values.
+    </p>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Al Manaarah Institute. All Rights Reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Al Manaarah Institute. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
