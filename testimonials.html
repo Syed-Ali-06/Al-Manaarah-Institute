@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Manaarah Institute | Testimonials</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #0f4c75, #3282b8);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav h1 {
+      font-size: 1.4rem;
+      color: #fff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+    nav ul li a.active {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 0.2rem;
+    }
+
+    /* Hero / Header */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #3282b8, #0f4c75);
+      color: #fff;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .testimonial-card {
+      background: #f7f9fc;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .testimonial-card p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .testimonial-card h4 {
+      margin: 0;
+      color: #0f4c75;
+      font-weight: 600;
+    }
+    .testimonial-card span {
+      display: block;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.3rem;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #0f4c75, #3282b8);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>Al Manaarah Institute</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="testimonials.html" class="active">Testimonials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>What Our Students & Parents Say</h2>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="testimonial-card">
+      <p>"The teachers at Al Manaarah Institute are amazing! My child has grown so much in confidence and knowledge."</p>
+      <h4>Anonymous.</h4>
+      <span>Parent</span>
+    </div>
+    <div class="testimonial-card">
+      <p>"I really enjoy the lessons. The structured curriculum makes learning easy and fun."</p>
+      <h4>Taha.</h4>
+      <span>Student</span>
+    </div>
+    <div class="testimonial-card">
+      <p>"Flexible hours and personalised guidance made it so easy to schedule learning around our family."</p>
+      <h4>Anonymous.</h4>
+      <span>Parent</span>
+    </div>
+    <div class="testimonial-card">
+      <p>"Professional, qualified, and caring teachers. I highly recommend Al Manaarah Institute."</p>
+      <h4>..</h4>
+      <span>Parent</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Al Manaarah Institute. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
