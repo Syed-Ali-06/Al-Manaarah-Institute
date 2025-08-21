@@ -5,121 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Al Manaarah Institute | Services</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #004aad; /* blue background */
-      color: white;
-      padding: 1rem;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav h1 {
-      font-size: 1.2rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a.active {
-      color: #ffd700; /* gold highlight for current page */
-    }
-
-    /* Hamburger button */
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    /* Mobile menu hidden by default */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #004aad;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        width: 200px;
-        padding: 1rem;
-        border-radius: 8px;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    section {
-      padding: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #f4f4f4;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      background: #222;
-      color: white;
-    }
-  </style>
 </head>
 <body>
   <header>
     <nav>
       <h1>Al Manaarah Institute</h1>
-      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="testimonials.html" class="active">Testimonials</a></li>
       </ul>
     </nav>
   </header>
@@ -149,14 +45,5 @@
   <footer>
     <p>&copy; 2025 Al Manaarah Institute. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-
-    toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>
