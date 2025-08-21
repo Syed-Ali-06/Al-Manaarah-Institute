@@ -43,6 +43,53 @@
     </div>
   </section>
 
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(180deg, #0f4c75, #3282b8);
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        width: 180px;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 1000;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Al Manaarah Institute</h1>
+      <!-- Hamburger button -->
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
   <footer>
     <p>&copy; 2025 Al Manaarah Institute. All Rights Reserved.</p>
   </footer>
