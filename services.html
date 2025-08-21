@@ -10,12 +10,14 @@
   <header>
     <nav>
       <h1>Al Manaarah Institute</h1>
+      <!-- Hamburger for mobile -->
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="testimonials.html" class="active">Testimonials</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
       </ul>
     </nav>
   </header>
@@ -45,5 +47,15 @@
   <footer>
     <p>&copy; 2025 Al Manaarah Institute. All Rights Reserved.</p>
   </footer>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
