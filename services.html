@@ -5,41 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Al Manaarah Institute | Services</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Mobile styles specifically for nav */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: linear-gradient(180deg, #0f4c75, #3282b8);
-        position: absolute;
-        top: 60px;
-        right: 2rem;
-        width: 180px;
-        padding: 10px;
-        border-radius: 8px;
-        z-index: 1000;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      nav ul li {
-        margin: 10px 0;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
     <nav>
       <h1>Al Manaarah Institute</h1>
-      <!-- Hamburger button -->
+      <!-- Same hamburger button as index.html -->
       <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -77,7 +48,7 @@
     <p>&copy; 2025 Al Manaarah Institute. All Rights Reserved.</p>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Same script as index.html -->
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('nav ul');
