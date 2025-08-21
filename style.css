@@ -120,4 +120,40 @@ footer {
   margin-top: 2rem;
 }
 
+/* Mobile menu styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333; /* adjust for visibility */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #f4f4f4;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 
